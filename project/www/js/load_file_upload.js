@@ -15,8 +15,7 @@ function loadFilesImgAll(event) {
                 .replace('data:', '')
                 .replace(/^.+,/, '');
             let text = atob(base64String);
-            addTextDef(text);
-            loadTxt(text);
+            loadTextAll(text);
         });
         reader.readAsDataURL(file);
     }

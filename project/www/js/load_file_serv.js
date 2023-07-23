@@ -1,9 +1,8 @@
 "use strict";
-let nameFile = "file01.txt";
+let nameFile = "./files/file01.txt";
 function testLoad(e) {
   fetch_txt(nameFile).then(function (response) {
-    addTextDef(response);
-    loadTxt(response);
+    loadTextAll(response);
   });
 }
 testLoad();
