@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+}
+input[type="file"] {
+  display: none;
+}
+#allTxt {
+    margin-top:15px;
+}
+ul {
+    text-align: left;
+}
+.tree {
+    width: 530px;
+    border: black 1px solid;
+}
+#allTxt {
+    display: flex;
+    justify-content: center;
+}
