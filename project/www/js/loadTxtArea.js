@@ -15,5 +15,5 @@ function createTxt(obj, decalage) {
 function loadTxtArea(obj) {
   createTxt(obj, "");
   textDisplay.innerHTML = recupText.trim("\n");
-  console.log(recupText);
+  //console.log(recupText);
 }

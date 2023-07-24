@@ -1,15 +1,38 @@
 "use strict";
 function textCompare(text){
-  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  let textOut = text;
+  if(ignoreAccent) {
+    textOut = textOut.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+  if(ignoreCase) {
+    textOut = textOut.toLowerCase();
+  }
+  return textOut;
 }
 function compare(a, b) {
-    if (textCompare(a.name) < textCompare(b.name)) {
-      return -1;
+    if(!trieAscending) {
+      return compareDesc(a, b);
+    } else {
+      return compareAsc(a, b);
     }
-    if (textCompare(a.name) > textCompare(b.name)) {
-      return 1;
-    }
-    return 0;
+}
+function compareAsc(a, b) {
+  if (textCompare(a.name) < textCompare(b.name)) {
+    return -1;
+  }
+  if (textCompare(a.name) > textCompare(b.name)) {
+    return 1;
+  }
+  return 0;
+}
+function compareDesc(a, b) {
+  if (textCompare(a.name) < textCompare(b.name)) {
+    return 1;
+  }
+  if (textCompare(a.name) > textCompare(b.name)) {
+    return -1;
+  }
+  return 0;
 }
 function orderContenu(obj) {
     if(obj.contenu != undefined) {
@@ -62,6 +85,8 @@ function loadTextAll(text) {
         }
       }
     });
-    orderContenu(o0);
+    if(trieCont) {
+      orderContenu(o0);
+    }
     loadAllDisplay(o0);
   }
