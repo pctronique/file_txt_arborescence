@@ -44,3 +44,21 @@ ul {
 #label-file:hover {
     border-bottom:black 2px solid;
 }
+
+#label-file {
+    margin-bottom: 15px;
+}
+
+#config {
+  display: flex;
+  justify-content: center;
+}
+
+#all-file,
+#choice-trie {
+  margin: 25px;
+}
+
+#checkChoice {
+  text-align: left;
+}
