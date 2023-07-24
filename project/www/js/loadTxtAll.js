@@ -1,9 +1,12 @@
 "use strict";
+function textCompare(text){
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
 function compare(a, b) {
-    if (a.name < b.name) {
+    if (textCompare(a.name) < textCompare(b.name)) {
       return -1;
     }
-    if (a.name > b.name) {
+    if (textCompare(a.name) > textCompare(b.name)) {
       return 1;
     }
     return 0;
