@@ -1,0 +1,46 @@
+body {
+    min-width: 500px;
+    text-align: center;
+}
+
+.sizeDisplay {
+    width: 450px;
+    height: 574px;
+    border: rgba(128, 128, 128, 0.479) 1px solid;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+input[type="button"] {
+    margin: 5px;
+}
+
+#allTxt {
+    margin-top:15px;
+}
+
+ul {
+    text-align: left;
+    list-style-type: none;
+}
+
+.tree {
+    margin-top: 0px;
+}
+
+#allTxt {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#allTxt div {
+    display: flex;
+    flex-direction: column;
+}
+
+#label-file:hover {
+    border-bottom:black 2px solid;
+}
