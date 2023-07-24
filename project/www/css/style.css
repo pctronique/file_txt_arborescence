@@ -62,3 +62,7 @@ ul {
 #checkChoice {
   text-align: left;
 }
+
+h1 {
+    margin-bottom: -15px;
+}
