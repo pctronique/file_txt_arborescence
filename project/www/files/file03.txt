@@ -1,0 +1,14 @@
+#Véhicule>
+#Sans moteur>
+#Vélo;
+#Trottinette;
+\;
+#Avec moteur>
+#voiture;
+#Vélo;
+#Voiture;
+#Camion;
+#car;
+#Car;
+\;
+\;
